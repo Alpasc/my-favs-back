@@ -14,6 +14,7 @@ app.use(
 // import rout files here
 
 const inscriptions = require('./routes/inscription');
+const connexions = require('./routes/connexion');
 
 // const tableRouter = require('./routes/tableroute');
 
@@ -29,6 +30,7 @@ app.use(
 // app.use('/tables, tableRouter);
 
 app.use('/inscription', inscriptions);
+app.use('/connexion', connexions);
 
 const server = app.listen(PORT, () => {
   console.log(`🌍 Server is running on port ${PORT}`);
