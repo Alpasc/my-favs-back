@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const connection = require('../../db');
 
-router.post('/', (req, res) => {
+router.post('/user', (req, res) => {
   try {
     const { mail, mdp } = req.body;
     connection.query('SELECT * FROM utilisateur WHERE mail = ?', { mail }, (error, result) => {
