@@ -16,6 +16,7 @@ app.use(
 const inscriptions = require('./routes/inscription');
 const connexions = require('./routes/connexion');
 const films = require('./routes/film');
+const genres = require('./routes/genre');
 
 // const tableRouter = require('./routes/tableroute');
 
@@ -33,6 +34,7 @@ app.use(
 app.use('/inscription', inscriptions);
 app.use('/connexion', connexions);
 app.use('/film', films);
+app.use('/genre', genres);
 
 const server = app.listen(PORT, () => {
   console.log(`🌍 Server is running on port ${PORT}`);
