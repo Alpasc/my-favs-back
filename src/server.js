@@ -1,12 +1,9 @@
-require('dotenv').config();
 const express = require('express');
 const app = express();
-const cors = require('cors');
 
-const PORT = process.env.PORT || (process.env.NODE_ENV === 'test' ? 3001 : 3000);
+const PORT = process.env.PORT || (process.env.NODE_ENV === 'test' ? 3001 : 4000);
 
 app.use(express.json());
-app.use(cors());
 // prettier-ignore
 app.use(
   express.urlencoded({
@@ -18,6 +15,13 @@ app.use(
 // const tableRouter = require('./routes/tableroute');
 
 // add app.use here
+
+app.use(express.json());
+app.use(
+  express.urlencoded({
+    extended: true,
+  }),
+);
 
 // app.use('/tables, tableRouter);
 
